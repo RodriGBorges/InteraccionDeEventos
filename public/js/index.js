@@ -29,6 +29,18 @@ window.onload = function(){
         }
     }
     
+    const logo = document.querySelector('figure.logoDH')
+    const menu = document.querySelector('#menu')
+
+    logo.addEventListener('click', () => {
+        menu.classList.toggle('mostrar')
+    })
+
+    menu.addEventListener('mouseleave', () => {
+        setTimeout(() => {
+            menu.classList.remove('mostrar')
+        }, 1000)
+    })
 
     container.style.display = 'block';
 }
